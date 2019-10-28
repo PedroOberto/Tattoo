@@ -1,40 +1,286 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Germania+One&display=swap");
 /* Estilo geral */
-body{
-		font-family: Arial, Helvetica, sant-serif;
-		background: #000;
+body {
+  font-family: "Germania One", cursive;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#1a1a1a));
+  background-image: linear-gradient(to right, #000, #1a1a1a);
+  letter-spacing: 2px;
+  color: #fff;
 }
-p{
-    
-}
-img{
-    display: block;
-    max-width: 100%;
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* Header */
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.botao-menu {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .botao-menu {
+    display: none;
+  }
+}
+
+.rotate .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.rotate .bar2 {
+  opacity: 0;
+}
+
+.rotate .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu {
+  opacity: 0;
+  background: #000000de;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.menu.ativo {
+  opacity: 1;
+}
+
+.menu a {
+  padding: 10px;
+  display: block;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    padding: 20px;
+    width: 50%;
+    opacity: 1;
+    background: none;
+    height: 100px;
+  }
+  .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menu a {
+    font-size: 20px;
+    margin: 0 10px;
+    letter-spacing: 5px;
+  }
+}
+
+.social {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.social a {
+  padding: 10px;
+  z-index: 1;
+}
+
+.social img {
+  max-width: 30px;
+}
+
+/* Inicio */
+#inicio {
+  position: relative;
+  background: url("../img/jake-davies-B_FkAD6JNTk-unsplash.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#inicio #svg-tattoo {
+  min-width: 340px;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: fill 2s ease forwards 2s;
+          animation: fill 2s ease forwards 2s;
+}
+
+#inicio #svg-tattoo path:nth-child(1),
+#inicio #svg-tattoo path:nth-child(2) {
+  stroke-dasharray: 4000px;
+  stroke-dashoffset: 4000px;
+  -webkit-animation: line-animation 2s ease forwards;
+          animation: line-animation 2s ease forwards;
+}
+
+#inicio #svg-tattoo path:nth-child(3),
+#inicio #svg-tattoo path:nth-child(4) {
+  stroke-dasharray: 5000px;
+  stroke-dashoffset: 5000px;
+  -webkit-animation: line-animation 2s ease forwards 0.3s;
+          animation: line-animation 2s ease forwards 0.3s;
+}
+
+#inicio #svg-tattoo path:nth-child(5),
+#inicio #svg-tattoo path:nth-child(6) {
+  stroke-dasharray: 5000px;
+  stroke-dashoffset: 5000px;
+  -webkit-animation: line-animation 2s ease forwards 0.6s;
+          animation: line-animation 2s ease forwards 0.6s;
+}
+
+#inicio #svg-tattoo path:nth-child(7),
+#inicio #svg-tattoo path:nth-child(8) {
+  stroke-dasharray: 5000px;
+  stroke-dashoffset: 5000px;
+  -webkit-animation: line-animation 2s ease forwards 0.9s;
+          animation: line-animation 2s ease forwards 0.9s;
+}
+
+#inicio #svg-tattoo path:nth-child(9),
+#inicio #svg-tattoo path:nth-child(10),
+#inicio #svg-tattoo path:nth-child(11) {
+  stroke-dasharray: 5000px;
+  stroke-dashoffset: 5000px;
+  -webkit-animation: line-animation 2s ease forwards 1.2s;
+          animation: line-animation 2s ease forwards 1.2s;
+}
+
+#inicio #svg-tattoo path:nth-child(12),
+#inicio #svg-tattoo path:nth-child(13),
+#inicio #svg-tattoo path:nth-child(14) {
+  stroke-dasharray: 5000px;
+  stroke-dashoffset: 5000px;
+  -webkit-animation: line-animation 2s ease forwards 1.5s;
+          animation: line-animation 2s ease forwards 1.5s;
+}
+
+@-webkit-keyframes line-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+#inicio .seta-baixo {
+  position: absolute;
+  width: 40px;
+  padding: 5px 8px;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 50%;
+  -webkit-animation: shadow-pulse 1s infinite;
+          animation: shadow-pulse 1s infinite;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#inicio .seta-baixo:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@-webkit-keyframes shadow-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+#inicio .credit-copy {
+  color: #6c6c6c;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+#inicio .credit-copy a {
+  color: #fff;
+}
 
 /* Footer */
-
 /* Animações */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

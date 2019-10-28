@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css?family=Germania+One&display=swap");
+/* Estilo geral */
+body {
+  font-family: "Germania One", cursive;
+  background-image: linear-gradient(to right, #000, #1a1a1a);
+  letter-spacing: 2px;
+  color: #fff;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* Header */
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.botao-menu {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.rotate .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  -moz-transform: rotate(-45deg) translate(-9px, 6px);
+  -o-transform: rotate(-45deg) translate(-9px, 6px);
+  -ms-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.rotate .bar2 {
+  opacity: 0;
+}
+.rotate .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  -moz-transform: rotate(45deg) translate(-8px, -8px);
+  -o-transform: rotate(45deg) translate(-8px, -8px);
+  -ms-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.menu {
+  opacity: 0;
+  background: #000000de;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding-top: 50%;
+  &.ativo {
+    opacity: 1;
+  }
+  a {
+    padding: 10px;
+    display: block;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 20px;
+    width: 50%;
+    opacity: 1;
+    background: none;
+    height: 100px;
+    ul {
+      display: flex;
+      justify-content: flex-start;
+    }
+    a {
+      font-size: 20px;
+      margin: 0 10px;
+      letter-spacing: 5px;
+    }
+  }
+}
+.social {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  a {
+    padding: 10px;
+    z-index: 1;
+  }
+  img {
+    max-width: 30px;
+  }
+}
+/* Inicio */
+#inicio {
+  position: relative;
+  background: url("../img/jake-davies-B_FkAD6JNTk-unsplash.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  // filter: grayscale(100%);
+  #svg-tattoo {
+    min-width: 340px;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 2s ease forwards 2s;
+  }
+  #svg-tattoo path:nth-child(1),
+  #svg-tattoo path:nth-child(2) {
+    stroke-dasharray: 4000px;
+    stroke-dashoffset: 4000px;
+    animation: line-animation 2s ease forwards;
+  }
+  #svg-tattoo path:nth-child(3),
+  #svg-tattoo path:nth-child(4) {
+    stroke-dasharray: 5000px;
+    stroke-dashoffset: 5000px;
+    animation: line-animation 2s ease forwards 0.3s;
+  }
+  #svg-tattoo path:nth-child(5),
+  #svg-tattoo path:nth-child(6) {
+    stroke-dasharray: 5000px;
+    stroke-dashoffset: 5000px;
+    animation: line-animation 2s ease forwards 0.6s;
+  }
+  #svg-tattoo path:nth-child(7),
+  #svg-tattoo path:nth-child(8) {
+    stroke-dasharray: 5000px;
+    stroke-dashoffset: 5000px;
+    animation: line-animation 2s ease forwards 0.9s;
+  }
+  #svg-tattoo path:nth-child(9),
+  #svg-tattoo path:nth-child(10),
+  #svg-tattoo path:nth-child(11) {
+    stroke-dasharray: 5000px;
+    stroke-dashoffset: 5000px;
+    animation: line-animation 2s ease forwards 1.2s;
+  }
+  #svg-tattoo path:nth-child(12),
+  #svg-tattoo path:nth-child(13),
+  #svg-tattoo path:nth-child(14) {
+    stroke-dasharray: 5000px;
+    stroke-dashoffset: 5000px;
+    animation: line-animation 2s ease forwards 1.5s;
+  }
+  @keyframes line-animation {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #fff;
+    }
+  }
+  .seta-baixo {
+    position: absolute;
+    width: 40px;
+    padding: 5px 8px;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 50%;
+    animation: shadow-pulse 1s infinite;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  @keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+  .credit-copy {
+    color: #6c6c6c;
+    a {
+      color: #fff;
+    }
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+/* Footer */
+
+/* Animações */
