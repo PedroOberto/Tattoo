@@ -3,10 +3,32 @@
 /* Estilo geral */
 body {
   font-family: "Germania One", cursive;
-  background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#1a1a1a));
-  background-image: linear-gradient(to right, #000, #1a1a1a);
+  background: url("../img/abstraction-triangle-geometry-pattern-cover-black.png");
+  background-color: #000;
   letter-spacing: 2px;
-  color: #fff;
+  color: #f2f2f2;
+  text-shadow: 0px 0px 5px #000;
+}
+
+h1 {
+  font-size: 30px;
+  position: relative;
+  top: 25%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    position: absolute;
+    left: 20%;
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  margin: 60px 0;
+  text-align: center;
 }
 
 img {
@@ -26,7 +48,7 @@ header {
 .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #fff;
+  background-color: #f2f2f2;
   margin: 6px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -62,6 +84,7 @@ header {
 
 .menu {
   opacity: 0;
+  display: none;
   background: #000000de;
   width: 100%;
   height: 100vh;
@@ -74,12 +97,13 @@ header {
 
 .menu.ativo {
   opacity: 1;
+  display: block;
 }
 
 .menu a {
   padding: 10px;
   display: block;
-  color: #fff;
+  color: #f2f2f2;
   font-size: 40px;
   letter-spacing: 10px;
 }
@@ -89,6 +113,7 @@ header {
     padding: 20px;
     width: 50%;
     opacity: 1;
+    display: block;
     background: none;
     height: 100px;
   }
@@ -132,6 +157,8 @@ header {
   background: url("../img/jake-davies-B_FkAD6JNTk-unsplash.png") no-repeat center center;
   background-size: cover;
   height: 100vh;
+  -webkit-box-shadow: inset 0px 0px 10px 10px #000;
+          box-shadow: inset 0px 0px 10px 10px #000;
 }
 
 #inicio #svg-tattoo {
@@ -228,18 +255,29 @@ header {
 
 #inicio .seta-baixo {
   position: absolute;
-  width: 40px;
-  padding: 5px 8px;
-  left: 50%;
+  left: 48%;
   bottom: 50px;
+}
+
+#inicio .seta-baixo span {
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
+  left: -20px;
+  color: #fff;
+}
+
+#inicio .seta-baixo img {
+  width: 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 5px 8px;
   border-radius: 50%;
   -webkit-animation: shadow-pulse 1s infinite;
           animation: shadow-pulse 1s infinite;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
-#inicio .seta-baixo:hover {
+#inicio .seta-baixo img:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
@@ -279,6 +317,39 @@ header {
 
 #inicio .credit-copy a {
   color: #fff;
+}
+
+/* Galeria */
+.galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.galeria img {
+  margin: 2.5px;
+  width: 250px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.galeria img:hover {
+  -webkit-animation: shadow-pulse 1s infinite;
+          animation: shadow-pulse 1s infinite;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+  z-index: 10;
 }
 
 /* Footer */
