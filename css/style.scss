@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Germania+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap");
 /* Estilo geral */
 body {
-  font-family: "Germania One", cursive;
+  font-family: "ZCOOL XiaoWei", serif;
   // background-image: linear-gradient(to right, #000, #2d2d2d);
   background: url("../img/abstraction-triangle-geometry-pattern-cover-black.png");
   background-color: #000;
@@ -11,11 +11,13 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   text-align: center;
+  font-size: 40px;
+  margin: 40px 20px;
 }
 h1 {
-  font-size: 30px;
   position: relative;
   top: 25%;
   @media only screen and (min-width: 768px) {
@@ -25,15 +27,17 @@ h1 {
   }
 }
 h2 {
-  font-size: 30px;
   margin: 60px 0;
 }
-h3 {
+h4 {
   font-size: 20px;
 }
 img {
   display: block;
   max-width: 100%;
+}
+section {
+  padding-top: 80px;
 }
 /* Header */
 header {
@@ -111,7 +115,7 @@ header {
       justify-content: flex-start;
     }
     a {
-      font-size: 20px;
+      font-size: 18px;
       margin: 0 10px;
       letter-spacing: 5px;
     }
@@ -121,9 +125,16 @@ header {
   margin: 20px;
   display: flex;
   justify-content: flex-end;
+  text-align: center;
   a {
     padding: 10px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    margin: 0 10px;
+    color: #6c6c6c;
   }
   img {
     max-width: 30px;
@@ -225,6 +236,7 @@ header {
   }
   .credit-copy {
     color: #6c6c6c;
+    font-size: 14px;
     a {
       color: #fff;
     }
@@ -235,6 +247,7 @@ header {
 }
 /* Galeria */
 .galeria {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,6 +297,54 @@ header {
     }
   }
 }
+/* Contato */
+.contato {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  h3,
+  h4 {
+    text-align: left;
+  }
+  img {
+    transition: all 0.5s;
+    max-width: 400px;
+    margin: 0 auto;
+    filter: grayscale(100%);
+    border: solid 2px #000;
+  }
+  .unidade {
+    background: #000;
+    transform: scale(1.1);
+    padding: 20px;
+    position: relative;
+    p {
+      margin: 20px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .unidade {
+      bottom: -140px;
+    }
+  }
+}
 /* Footer */
-
-/* Animações */
+footer {
+  background-color: #000;
+  position: relative;
+  top: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  span {
+    display: block;
+    text-align: center;
+    color: white;
+  }
+  .pedrooberto_footer {
+    width: 40px;
+  }
+}
