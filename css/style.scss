@@ -139,7 +139,7 @@ header {
   box-shadow: inset 0px 0px 10px 10px #000;
   // filter: grayscale(100%);
   #svg-tattoo {
-    min-width: 340px;
+    min-width: 250px;
     max-width: 700px;
     position: absolute;
     top: 50%;
@@ -201,14 +201,7 @@ header {
   .seta-baixo {
     position: absolute;
     left: 48%;
-    bottom: 50px;
-    span {
-      font-size: 25px;
-      position: relative;
-      bottom: 20px;
-      left: -20px;
-      color: #fff;
-    }
+    bottom: 70px;
     img {
       width: 40px;
       transition: all 0.5s;
@@ -249,14 +242,14 @@ header {
   img {
     margin: 2.5px;
     width: 250px;
-    // object-fit: cover;
+    border: solid 2px #000;
     transition: all 0.5s;
     transform: scale(1.1);
     &:hover {
       animation: shadow-pulse 1s infinite;
       transform: scale(1.2);
       cursor: pointer;
-      z-index: 10;
+      z-index: 100;
     }
   }
 }
@@ -273,14 +266,14 @@ header {
     margin: 40px;
     picture {
       .seta {
-        width: 30px;
+        width: 20px;
         margin: 10px auto;
         @media only screen and (min-width: 768px) {
           transform: rotate(-90deg);
         }
       }
       .icone {
-        width: 80px;
+        width: 50px;
         margin: 10px auto;
       }
     }

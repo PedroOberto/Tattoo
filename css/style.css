@@ -170,7 +170,7 @@ header {
 }
 
 #inicio #svg-tattoo {
-  min-width: 340px;
+  min-width: 250px;
   max-width: 700px;
   position: absolute;
   top: 50%;
@@ -264,15 +264,7 @@ header {
 #inicio .seta-baixo {
   position: absolute;
   left: 48%;
-  bottom: 50px;
-}
-
-#inicio .seta-baixo span {
-  font-size: 25px;
-  position: relative;
-  bottom: 20px;
-  left: -20px;
-  color: #fff;
+  bottom: 70px;
 }
 
 #inicio .seta-baixo img {
@@ -345,6 +337,7 @@ header {
 .galeria img {
   margin: 2.5px;
   width: 250px;
+  border: solid 2px #000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: scale(1.1);
@@ -357,7 +350,7 @@ header {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* Como Trabalhamos */
@@ -388,7 +381,7 @@ header {
 }
 
 .diagrama div picture .seta {
-  width: 30px;
+  width: 20px;
   margin: 10px auto;
 }
 
@@ -400,7 +393,7 @@ header {
 }
 
 .diagrama div picture .icone {
-  width: 80px;
+  width: 50px;
   margin: 10px auto;
 }
 
