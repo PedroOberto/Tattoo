@@ -5,38 +5,99 @@ body {
   // background-image: linear-gradient(to right, #000, #2d2d2d);
   background: url("../img/abstraction-triangle-geometry-pattern-cover-black.png");
   background-color: #000;
+  background-size: 150%;
   letter-spacing: 2px;
   color: #f2f2f2;
   text-shadow: 0px 0px 5px #000;
 }
-h1,
-h2,
-h3,
-h4 {
-  text-align: center;
-  font-size: 40px;
-  margin: 40px 20px;
-}
-h1 {
+.container {
+  width: 300;
+  margin: 0 auto;
+  padding: 0px;
   position: relative;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container:after,
+.container:before {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+h1,
+h2 {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  margin-left: 20px;
+  text-align: left;
+  position: relative;
+  font-size: 30px;
   @media only screen and (min-width: 768px) {
-    position: absolute;
-    left: 20%;
     font-size: 40px;
   }
 }
-h2 {
-  margin: 60px 0;
+
+h1 {
+  margin-top: 120px;
+  @media only screen and (min-width: 768px) {
+    &::before {
+      content: "";
+      height: 200px;
+      border-left: solid 2px #fff;
+      position: absolute;
+      width: 20px;
+      top: 100px;
+      z-index: 10;
+      left: -20px;
+    }
+  }
+}
+h3 {
+  text-align: center;
+  font-size: 24px;
 }
 h4 {
   font-size: 20px;
+  margin: 20px;
+}
+
+a {
+  color: #fff;
+}
+span {
+  margin: 0 10px;
+  color: #6c6c6c;
+}
+p {
+  margin: 5px 20px;
 }
 img {
   display: block;
   max-width: 100%;
 }
-section {
-  padding-top: 80px;
+#galeria,
+#como-trabalhamos,
+#contato {
+  margin-top: 100px;
 }
 /* Header */
 header {
@@ -131,10 +192,6 @@ header {
     display: flex;
     align-items: center;
   }
-  span {
-    margin: 0 10px;
-    color: #6c6c6c;
-  }
   img {
     max-width: 30px;
   }
@@ -146,7 +203,7 @@ header {
     center center;
   background-size: cover;
   height: 100vh;
-  box-shadow: inset 0px 0px 10px 10px #000;
+  box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
   // filter: grayscale(100%);
   #svg-tattoo {
     min-width: 250px;
@@ -235,39 +292,18 @@ header {
   }
   .credit-copy {
     color: #6c6c6c;
-    font-size: 14px;
-    a {
-      color: #fff;
-    }
+    font-size: 12px;
     position: absolute;
     right: 20px;
     bottom: 20px;
   }
 }
-/* Galeria */
-.galeria {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  img {
-    margin: 2.5px;
-    width: 250px;
-    border: solid 2px #000;
-    transition: all 0.5s;
-    transform: scale(1.1);
-    &:hover {
-      animation: shadow-pulse 1s infinite;
-      transform: scale(1.2);
-      cursor: pointer;
-      z-index: 100;
-    }
-  }
-}
 /* Como Trabalhamos */
 .diagrama {
   display: block;
+  h4 {
+    text-align: center;
+  }
   @media only screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
@@ -275,7 +311,7 @@ header {
     flex-wrap: wrap;
   }
   div {
-    margin: 40px;
+    margin: 20px;
     picture {
       .seta {
         width: 20px;
@@ -296,54 +332,91 @@ header {
     }
   }
 }
-/* Contato */
-.contato {
-  text-align: left;
+/* Galeria */
+
+.galeria {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  h3,
-  h4 {
-    text-align: left;
-  }
   img {
-    transition: all 0.5s;
-    max-width: 400px;
-    margin: 0 auto;
-    filter: grayscale(100%);
+    margin: 2.5px;
+    width: 250px;
     border: solid 2px #000;
-  }
-  .unidade {
-    background: #000;
-    transform: scale(1.1);
-    padding: 20px;
-    position: relative;
-    p {
-      margin: 20px;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    .unidade {
-      bottom: -140px;
+    transition: all 0.5s;
+    // transform: scale(1.1);
+    &:hover {
+      animation: shadow-pulse 1s infinite;
+      transform: scale(1.2);
+      cursor: pointer;
+      z-index: 100;
     }
   }
 }
+/* Contato */
+.contato {
+  .map {
+    width: 100%;
+    height: 300px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  h3,
+  h4 {
+    margin: 20px;
+  }
+  .unidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    @media only screen and (min-width: 768px) {
+      border-left: solid 2px #fff;
+      flex-direction: column;
+      align-items: start;
+      &::before {
+        content: "";
+        height: 200px;
+        border-bottom: solid 2px #fff;
+        position: absolute;
+        width: 70%;
+        height: 20px;
+        // top: 100px;
+        z-index: 10;
+        left: 20px;
+      }
+    }
+  }
+}
+.footer-background {
+  position: relative;
+  background: url("../img/jake-davies-lEL5auXYrU0-unsplash.png") no-repeat
+    center center;
+  background-size: cover;
+  height: 100vh;
+  box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
+}
 /* Footer */
 footer {
-  background-color: #000;
   position: relative;
-  top: 100px;
-  padding: 20px;
+  height: 80px;
+  // top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  span {
-    display: block;
-    text-align: center;
-    color: white;
+  flex-wrap: wrap;
+  @media only screen and (min-width: 768px) {
+    justify-content: space-between;
   }
-  .pedrooberto_footer {
-    width: 40px;
+  font-size: 12px;
+  color: white;
+  div {
+    display: flex;
+  }
+  img {
+    width: 100px;
   }
 }

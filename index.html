@@ -14,7 +14,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -32,14 +31,16 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="">Galeria</a></li>
-					<li><a href="">Contato</a></li>
+					<li><a href="#inicio">Home</a></li>
+					<li><a href="#galeria">Galeria</a></li>
+					<li><a href="#contato">Contato</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section id="inicio">
-			<h1>Estudio de Tatuagem</h1>
+			<div class="container">
+				<h1>Estudio de Tatuagem</h1>
+			</div>
 			<svg id="svg-tattoo" fill="none" stroke="#ffffff" stroke-width="20" version="1.0"
 				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 1100" preserveAspectRatio="xMidYMid meet">
 				<g>
@@ -80,7 +81,31 @@
 					Davies</a> on <a
 					href="/s/photos/tattoo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 		</section>
-		<section id="como-trabalhamos">
+		<section id="galeria" class="container">
+			<h2>Galeria</h2>
+			<div class="galeria">
+				<picture>
+					<img src="img/galeria/enhanced-17675-1459187547-2.webp" alt="">
+				</picture>
+				<picture>
+					<img src="img/galeria/candidatos-miss-e-mister-tattoo-2019-q98a4808-celso-tavares-g1-.jpg.webp" alt="">
+				</picture>
+				<picture>
+					<img src="img/galeria/nodes_kTjcZFPpOv.jpg.webp" alt="">
+				</picture>
+				<picture>
+					<img src="img/galeria/w640.jpg" alt="">
+				</picture>
+				<picture>
+					<img src="img/galeria/035d9ee5c531a63269a106d6daa87af0.jpg" alt="">
+				</picture>
+				<picture>
+					<img src="img/galeria/livqjpruan-1491893536.jpg" alt="">
+				</picture>
+			</div>
+		</section>
+		<section id="como-trabalhamos" class="container">
+			<h2>Como Trabalhamos</h2>
 			<div class="diagrama">
 				<div>
 					<picture>
@@ -112,60 +137,37 @@
 				</div>
 			</div>
 		</section>
-		<section id="galeria" class="container">
-			<h2>Galeria</h2>
-			<div class="galeria">
-				<picture>
-					<img src="img/galeria/enhanced-17675-1459187547-2.webp" alt="">
-				</picture>
-				<picture>
-					<img src="img/galeria/candidatos-miss-e-mister-tattoo-2019-q98a4808-celso-tavares-g1-.jpg.webp" alt="">
-				</picture>
-				<picture>
-					<img src="img/galeria/nodes_kTjcZFPpOv.jpg.webp" alt="">
-				</picture>
-				<picture>
-					<img src="img/galeria/w640.jpg" alt="">
-				</picture>
-				<picture>
-					<img src="img/galeria/035d9ee5c531a63269a106d6daa87af0.jpg" alt="">
-				</picture>
-				<picture>
-					<img src="img/galeria/livqjpruan-1491893536.jpg" alt="">
-				</picture>
-			</div>
-		</section>
-		<section id="contato" class="">
-			<h2>Contato</h2>
-			<div class="contato">
-					<picture>
-						<img src="img/galeria-do-rock.jpg" alt="">
-					</picture>
-				<div class="unidade">
-					<h4>Galeria do Rock</h4>
-					<h3>São Paulo - Avenida São João, 439</h3>
-					<p>Segunda à Sexta – 10h às 21h30</p>
-					<p>Sábado – 10h ás 19h</p>					
-					<p>contato@tattoo.com</p>
-					<p>(11) 9 1234-5678</p>
+		<div class="footer-background">
+			<section id="contato" class="container">
+				<h2>Contato</h2>
+				<div class="contato">
+					<div class="unidade">
+						<h4>Galeria do Rock</h4>
+						<h3>São Paulo - Avenida São João, 439</h3>
+						<p>Segunda à Sexta – 10h às 21h30</p>
+						<p>Sábado – 10h ás 19h</p>
+						<p>contato@tattoo.com</p>
+						<p>(11) 9 1234-5678</p>
+					</div>
 				</div>
-			</div>
-			<div class="social">
-				<a href=""><span>Facebook</span><img src="img/facebook.png" alt="Facebook"></a>
-				<a href=""><span>Instagram</span><img src="img/instagram.png" alt="Instagram"></a>
-			</div>
-		</section>
-		<footer>
-				<span>© 2019 Tattoo – Alguns direitos reservados.</span>
-				<a href="https://pedrooberto.com.br/" target="_blank">
-					<img
-						class="pedrooberto_footer"
-						src="img/pedrooberto_footer.png"
-						alt="Desenvolvido por Pedro Oberto"
-						title="Desenvolvido por Pedro Oberto"
-					/>
-				</a>
+				<div class="social">
+					<a href=""><span>Facebook</span><img src="img/facebook.png" alt="Facebook"></a>
+					<a href=""><span>Instagram</span><img src="img/instagram.png" alt="Instagram"></a>
+				</div>
+			</section>
+			<footer class="container">
+				<div>
+					<span>© 2019</span>
+					<img src="img/tattoo.png" alt="Tattoo">
+				</div>
+				<div>
+					<span>Desenvolvido por </span>
+					<a href="https://pedrooberto.com.br/" target="_blank">
+						Pedro Oberto
+					</a>
+				</div>
 			</footer>
+		</div>
 	</main>
 	<!-- JavaScript -->
 	<script src="js/main.js"></script>
