@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Radley&display=swap");
+// @import url("https://db.onlinewebfonts.com/c/91dd06fc110a0b45117e9338dcb9dcf9?family=Colonna+MT");
 /* Estilo geral */
 body {
-  font-family: "ZCOOL XiaoWei", serif;
+  font-family: "Ubuntu", sans-serif;
+  // font-family: "Colonna MT";
   // background-image: linear-gradient(to right, #000, #2d2d2d);
   background: url("../img/abstraction-triangle-geometry-pattern-cover-black.png");
   background-color: #000;
@@ -56,21 +59,6 @@ h2 {
   }
 }
 
-h1 {
-  margin-top: 120px;
-  @media only screen and (min-width: 768px) {
-    &::before {
-      content: "";
-      height: 200px;
-      border-left: solid 2px #fff;
-      position: absolute;
-      width: 20px;
-      top: 100px;
-      z-index: 10;
-      left: -20px;
-    }
-  }
-}
 h3 {
   text-align: center;
   font-size: 24px;
@@ -79,16 +67,23 @@ h4 {
   font-size: 20px;
   margin: 20px;
 }
-
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Radley", serif;
+}
 a {
   color: #fff;
 }
 span {
   margin: 0 10px;
-  color: #6c6c6c;
+  color: #a2a2a2;
 }
 p {
-  margin: 5px 20px;
+  margin: 10px 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 img {
   display: block;
@@ -97,7 +92,7 @@ img {
 #galeria,
 #como-trabalhamos,
 #contato {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 /* Header */
 header {
@@ -299,6 +294,14 @@ header {
   }
 }
 /* Como Trabalhamos */
+#como-trabalhamos {
+  .descricao {
+    @media only screen and (min-width: 768px) {
+      border-left: solid 2px #fff;
+      padding-left: 40px;
+    }
+  }
+}
 .diagrama {
   display: block;
   h4 {
@@ -372,21 +375,21 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 40px;
     @media only screen and (min-width: 768px) {
       border-left: solid 2px #fff;
+      padding-left: 40px;
       flex-direction: column;
       align-items: start;
-      &::before {
-        content: "";
-        height: 200px;
-        border-bottom: solid 2px #fff;
-        position: absolute;
-        width: 70%;
-        height: 20px;
-        // top: 100px;
-        z-index: 10;
-        left: 20px;
+      h3 {
+        position: relative;
+        &::after {
+          content: "";
+          border-bottom: solid 2px #fff;
+          position: absolute;
+          width: 80%;
+          left: -20px;
+          top: 55px;
+        }
       }
     }
   }
