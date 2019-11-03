@@ -5,5 +5,5 @@ https://pedrooberto.github.io/Tattoo/
 
 _Guia de Estilo_
 
-![Screenshot Login](/img/guia-de-estilo-Recovered.png)
+![Screenshot](/img/guia-de-estilo-Recovered.png)
 =======
