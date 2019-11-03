@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Radley&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 /* Estilo geral */
 body {
   font-family: "Ubuntu", sans-serif;
@@ -79,7 +79,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Radley", serif;
+  font-family: "Playfair Display", serif;
 }
 
 a {
