@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Radley&display=swap");
 /* Estilo geral */
@@ -164,11 +165,6 @@ header {
   top: 0;
   text-align: center;
   padding-top: 50%;
-}
-
-.menu.ativo {
-  opacity: 1;
-  display: block;
 }
 
 .menu a {
@@ -534,15 +530,6 @@ header {
   }
 }
 
-.footer-background {
-  position: relative;
-  background: url("../img/jake-davies-lEL5auXYrU0-unsplash.png") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  -webkit-box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
-          box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
-}
-
 /* Footer */
 footer {
   position: relative;
@@ -578,5 +565,185 @@ footer div {
 
 footer img {
   width: 100px;
+}
+
+/* Animação */
+header,
+.galeria picture,
+h1,
+h2,
+h3,
+h4,
+p,
+.diagrama div {
+  opacity: 0;
+}
+
+header.animation-scroll.ativo {
+  -webkit-animation: fadeInDown 2s ease forwards;
+          animation: fadeInDown 2s ease forwards;
+}
+
+.menu.ativo {
+  opacity: 1;
+  display: block;
+  -webkit-animation: fadeInDown 1s ease forwards;
+          animation: fadeInDown 1s ease forwards;
+}
+
+.animation-scroll.ativo h1,
+.animation-scroll.ativo h2,
+.animation-scroll.ativo h3,
+.animation-scroll.ativo h4,
+.animation-scroll.ativo p,
+.animation-scroll.ativo .diagrama div:nth-child(1),
+.animation-scroll.ativo .galeria picture:nth-child(1) {
+  -webkit-animation: fadeInUp 1s ease forwards;
+          animation: fadeInUp 1s ease forwards;
+}
+
+.animation-scroll.ativo .diagrama div:nth-child(2),
+.animation-scroll.ativo .galeria picture:nth-child(2) {
+  -webkit-animation: fadeInUp 1s ease forwards 0.3s;
+          animation: fadeInUp 1s ease forwards 0.3s;
+}
+
+.animation-scroll.ativo .diagrama div:nth-child(3),
+.animation-scroll.ativo .galeria picture:nth-child(3) {
+  -webkit-animation: fadeInUp 1s ease forwards 0.6s;
+          animation: fadeInUp 1s ease forwards 0.6s;
+}
+
+.animation-scroll.ativo .diagrama div:nth-child(4),
+.animation-scroll.ativo .galeria picture:nth-child(4) {
+  -webkit-animation: fadeInUp 1s ease forwards 0.9s;
+          animation: fadeInUp 1s ease forwards 0.9s;
+}
+
+.animation-scroll.ativo .diagrama div:nth-child(5),
+.animation-scroll.ativo .galeria picture:nth-child(5) {
+  -webkit-animation: fadeInUp 1s ease forwards 1.2s;
+          animation: fadeInUp 1s ease forwards 1.2s;
+}
+
+.animation-scroll.ativo .galeria picture:nth-child(6) {
+  -webkit-animation: fadeInUp 1s ease forwards 1.5s;
+          animation: fadeInUp 1s ease forwards 1.5s;
+}
+
+.inicio.animation-scroll.ativo {
+  -webkit-animation: fadeInLeft 4s ease forwards;
+          animation: fadeInLeft 4s ease forwards;
+}
+
+.footer-background {
+  background: none;
+}
+
+.footer-background.animation-scroll.ativo {
+  position: relative;
+  background: url("../img/jake-davies-lEL5auXYrU0-unsplash.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  -webkit-box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
+          box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
+  -webkit-animation: fadeInRight 4s ease forwards;
+          animation: fadeInRight 4s ease forwards;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    background-position-x: -1000px;
+  }
+  to {
+    opacity: 1;
+    background-position-x: center;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    background-position-x: -1000px;
+  }
+  to {
+    opacity: 1;
+    background-position-x: center;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    background-position-x: 1000px;
+  }
+  to {
+    opacity: 1;
+    background-position-x: center;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    background-position-x: 1000px;
+  }
+  to {
+    opacity: 1;
+    background-position-x: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

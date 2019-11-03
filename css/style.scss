@@ -147,10 +147,6 @@ header {
   top: 0;
   text-align: center;
   padding-top: 50%;
-  &.ativo {
-    opacity: 1;
-    display: block;
-  }
   a {
     padding: 10px;
     display: block;
@@ -194,12 +190,10 @@ header {
 /* Inicio */
 #inicio {
   position: relative;
-  background: url("../img/jake-davies-B_FkAD6JNTk-unsplash.png") no-repeat
-    center center;
+  background: url("../img/jake-davies-B_FkAD6JNTk-unsplash.png") no-repeat center center;
   background-size: cover;
   height: 100vh;
   box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
-  // filter: grayscale(100%);
   #svg-tattoo {
     min-width: 250px;
     max-width: 700px;
@@ -394,14 +388,7 @@ header {
     }
   }
 }
-.footer-background {
-  position: relative;
-  background: url("../img/jake-davies-lEL5auXYrU0-unsplash.png") no-repeat
-    center center;
-  background-size: cover;
-  height: 100vh;
-  box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
-}
+
 /* Footer */
 footer {
   position: relative;
@@ -421,5 +408,116 @@ footer {
   }
   img {
     width: 100px;
+  }
+}
+
+/* Animação */
+
+header,
+.galeria picture,
+h1,
+h2,
+h3,
+h4,
+p,
+.diagrama div {
+  opacity: 0;
+}
+header.animation-scroll.ativo {
+  animation: fadeInDown 2s ease forwards;
+}
+.menu.ativo {
+  opacity: 1;
+  display: block;
+  animation: fadeInDown 1s ease forwards;
+}
+.animation-scroll.ativo {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  .diagrama div:nth-child(1),
+  .galeria picture:nth-child(1) {
+    animation: fadeInUp 1s ease forwards;
+  }
+  .diagrama div:nth-child(2),
+  .galeria picture:nth-child(2) {
+    animation: fadeInUp 1s ease forwards 0.3s;
+  }
+  .diagrama div:nth-child(3),
+  .galeria picture:nth-child(3) {
+    animation: fadeInUp 1s ease forwards 0.6s;
+  }
+  .diagrama div:nth-child(4),
+  .galeria picture:nth-child(4) {
+    animation: fadeInUp 1s ease forwards 0.9s;
+  }
+  .diagrama div:nth-child(5),
+  .galeria picture:nth-child(5) {
+    animation: fadeInUp 1s ease forwards 1.2s;
+  }
+  .galeria picture:nth-child(6) {
+    animation: fadeInUp 1s ease forwards 1.5s;
+  }
+}
+.inicio.animation-scroll.ativo {
+  animation: fadeInLeft 4s ease forwards;
+}
+.footer-background {
+  background: none;
+}
+.footer-background.animation-scroll.ativo {
+  position: relative;
+  background: url("../img/jake-davies-lEL5auXYrU0-unsplash.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  box-shadow: 0px 0px 20px 20px #000, inset 0px 0px 20px 20px #000;
+
+  animation: fadeInRight 4s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    background-position-x: -1000px;
+  }
+
+  to {
+    opacity: 1;
+    background-position-x: center;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    background-position-x: 1000px;
+  }
+
+  to {
+    opacity: 1;
+    background-position-x: center;
   }
 }
